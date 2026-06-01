@@ -4,19 +4,24 @@
 // import heroImg from './assets/hero.png'
 import './App.css'
 import { Grid } from '@mui/material';
-
+import HeaderUI from './componens/HeaderUI';
+import AlertUI from './componens/AlertUI';
 
 function App() {
   return (
     <Grid container spacing={5} justifyContent="center" alignItems="center">
 
       {/* Encabezado */}
-      <Grid size={{ xs: 12, md: 12 }}>Elemento: Encabezado</Grid>
+      <Grid size={{ xs: 12, md: 12 }}>
+        <HeaderUI />
+      </Grid>
 
       {/* Alertas */}
       <Grid size={{ xs: 12, md: 12 }}
-        sx={{ display: { xs: "none", md: "block" } }} >
-        Elemento: Alertas</Grid>
+          sx={{ display: { xs: "none", md: "block" } }}
+          container justifyContent="center" alignItems="center">
+          <AlertUI description="No se preveen lluvias" />
+        </Grid>
 
       {/* Selector */}
       <Grid size={{ xs: 12, md: 12 }}>Elemento: Selector</Grid>
